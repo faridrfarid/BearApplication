@@ -1,25 +1,22 @@
 const PARAM = 'PARAM_'
 const PAGE = 'PAGE_'
-const SERVER = ''
+const SERVER = 'https://api.punkapi.com/v2/'
 module.exports = {
     //STATIC PARAMETERS
     SERVER: SERVER,
     PARAM: PARAM,
     PAGE: PAGE,
     COLOR: {
-        black: '#000',
-        blackLite: '#0a1826',
-        redMain: '#b70249',
-        white: 'white',
-        mainGreen: '#009864',
-        silverBg: '#eff4f7',
+        black: '#363537',
+        red: '#cb1c00',
+        white: '#fbe8ed',
     },
 
 
 
     NETWORK_APIS: {
-        TEST: {
-            test: 'test',
+        BEARS: {
+            get: SERVER + 'beers',
         },
     },
     Z_INDEX: {

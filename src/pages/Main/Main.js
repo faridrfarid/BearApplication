@@ -24,7 +24,7 @@ class Main extends Component {
         this.state = {}
         this.lastBackButtonPress = null
         this.backButtonListener = null
-        props.dispatch(setParam(Param.LOADING, true))
+        props.dispatch(setParam(Param.BEAR_LIST, true))
         props.dispatch(setParam(Param.WIDTH, width))
         props.dispatch(setParam(Param.HEIGHT, height))
     }
