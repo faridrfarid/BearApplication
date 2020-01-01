@@ -80,7 +80,7 @@ class BearList extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <View style={{ width: '100%', alignItems: 'flex-end', flexDirection: 'row', height: 100, backgroundColor: Param.COLOR.red }}>
+                <View style={styles.headerContainer}>
                     {this.state.headerButtons.map((item, index) => (
                         <TouchableOpacity
                             onPress={() => {
@@ -89,7 +89,11 @@ class BearList extends Component {
                                 items[index].selected = true
                                 this.setState({ headerButtons: items })
                             }}
-                            style={{ bottom: 0, justifyContent: 'center', alignItems: 'center', width: this.props.width / 4, height: 50, borderTopLeftRadius: 5, borderTopRightRadius: 5, backgroundColor: item.selected ? Param.COLOR.black : 'transparent' }} key={index}>
+                            style={[styles.tabButtonsStyles
+                                , {
+                                width: this.props.width / 4,
+                                backgroundColor: item.selected ? Param.COLOR.black : 'transparent'
+                            }]} key={index}>
                             {item.icon}
                         </TouchableOpacity>
                     ))}
@@ -186,8 +190,8 @@ class BearList extends Component {
                             ))}
                     </View>
                 </ScrollableTabView>}
-                {this.state.headerButtons[1].selected && <View style={{ height : '100%' ,justifyContent : 'center' , alignItems : 'center'}}>
-                    <Text style={{ color: Param.COLOR.black }}>
+                {this.state.headerButtons[1].selected && <View style={styles.extraPageContainer}>
+                    <Text style={styles.extraPageText}>
                         Show Extra Things here !
                     </Text>
                 </View>}

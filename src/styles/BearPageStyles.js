@@ -34,11 +34,34 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         marginVertical: 10
     },
-    itemContainerMain:{
+    itemContainerMain: {
         width: '100%',
-         justifyContent: 'space-around',
-          flexDirection: 'row',
-           flexWrap: 'wrap'
+        justifyContent: 'space-around',
+        flexDirection: 'row',
+        flexWrap: 'wrap'
+    },
+    extraPageContainer: {
+        height: '100%',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    extraPageText: {
+        color: Param.COLOR.black,
+        fontSize: 20
+    },
+    tabButtonsStyles: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 50,
+        borderTopLeftRadius: 5,
+        borderTopRightRadius: 5,
+    },
+    headerContainer: {
+        width: '100%',
+        alignItems: 'flex-end',
+        flexDirection: 'row',
+        height: 100,
+        backgroundColor: Param.COLOR.red
     }
 });
 
