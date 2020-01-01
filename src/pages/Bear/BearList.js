@@ -59,7 +59,7 @@ class BearList extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <View style={{ width: '100%', justifyContent: 'space-around', flexDirection: 'row', flexWrap: 'wrap' }}>
+                <View style={styles.itemContainerMain}>
                     {this.state.BeersList
                         .sort(sortBy(this.state.sortFunction))
                         .map((item, index) => (
@@ -73,15 +73,15 @@ class BearList extends Component {
                                         this.props.dispatch(setParam(Param.BEAR_DETAIL_ITEM, item))
                                     }}
                                 >
-                                    <View style={{ height: 100, justifyContent: 'center', borderRadius: 10, borderColor: Param.COLOR.black, borderWidth: 1, marginVertical: 10 }}>
-                                        <Image style={{ width: '100%', height: '90%', borderRadius: 10, resizeMode: 'contain' }}
+                                    <View style={styles.itemContainer}>
+                                        <Image style={styles.itemImageStyle}
                                             source={{ uri: item.image_url }} />
                                     </View>
                                 </TouchableOpacity>
-                                <Text style={{ fontSize: 15, color: Param.COLOR.black, marginTop: 10, textAlign: 'center' }}>
+                                <Text style={styles.nameText}>
                                     {item.name}
                                 </Text>
-                                <Text style={{ fontSize: 14, color: Param.COLOR.black, marginTop: 5, textAlign: 'center' }}>
+                                <Text style={styles.abvText}>
                                     {item.abv}
                                 </Text>
                             </View>
