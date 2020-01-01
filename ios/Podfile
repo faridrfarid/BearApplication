@@ -34,6 +34,8 @@ target 'BearApplication' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'react-native-shake', :path => '../node_modules/react-native-shake'
+
   target 'BearApplicationTests' do
     inherit! :search_paths
     # Pods for testing
