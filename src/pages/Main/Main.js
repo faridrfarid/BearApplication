@@ -15,6 +15,7 @@ import Loading from 'BearApplication/src/actions/Loading'
 
 //Bear Pages
 import BearList from '../Bear/BearList'
+import BearDetail from '../Bear/BearDetail'
 
 
 const { height, width } = Dimensions.get('window')
@@ -76,6 +77,7 @@ class Main extends Component {
                 <StatusBar backgroundColor={Param.COLOR.redMain} />
                 <View style={{ position: 'absolute', zIndex: 1, width: width, height: height }}>
                     {this.props.pages[Param.BEAR_LIST] && <BearList></BearList>}
+                    {this.props.pages[Param.BEAR_DETAIL] && <BearDetail></BearDetail>}
                     {this.props.pages[Param.LOADING] && <Loading></Loading>}
                 </View>
             </View>

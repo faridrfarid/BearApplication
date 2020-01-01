@@ -67,10 +67,17 @@ class BearList extends Component {
                                 animation={"bounceInLeft"}
                                 delay={100 + index * 100}
                                 key={index} style={{ width: '30%' }}>
-                                <View style={{ height: 100, borderRadius: 10, borderColor: Param.COLOR.black, borderWidth: 1 , marginVertical : 10 }}>
-                                    <Image style={{ width: '100%', height: '100%', borderRadius: 10, resizeMode: 'cover' }}
-                                        source={{ uri: item.image_url }} />
-                                </View>
+                                <TouchableOpacity
+                                    onPress={() => {
+                                        this.props.dispatch(setParam(Param.BEAR_DETAIL, true))
+                                        this.props.dispatch(setParam(Param.BEAR_DETAIL_ITEM, item))
+                                    }}
+                                >
+                                    <View style={{ height: 100, justifyContent: 'center', borderRadius: 10, borderColor: Param.COLOR.black, borderWidth: 1, marginVertical: 10 }}>
+                                        <Image style={{ width: '100%', height: '90%', borderRadius: 10, resizeMode: 'contain' }}
+                                            source={{ uri: item.image_url }} />
+                                    </View>
+                                </TouchableOpacity>
                                 <Text style={{ fontSize: 15, color: Param.COLOR.black, marginTop: 10, textAlign: 'center' }}>
                                     {item.name}
                                 </Text>

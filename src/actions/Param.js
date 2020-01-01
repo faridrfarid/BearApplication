@@ -9,7 +9,7 @@ module.exports = {
     COLOR: {
         black: '#363537',
         red: '#cb1c00',
-        white: '#fbe8ed',
+        white: 'white',
     },
 
 
@@ -21,6 +21,7 @@ module.exports = {
     },
     Z_INDEX: {
         bearList: 100,
+        bearDetail: 200,
         loading: 1000000,
     },
 
@@ -28,6 +29,7 @@ module.exports = {
     //DYNAMIC PARAMETERS
     WIDTH: PARAM + 'WIDTH',
     HEIGHT: PARAM + 'HEIGHT',
+    BEAR_DETAIL_ITEM: PARAM + 'BEAR_DETAIL_ITEM',
 
 
 
@@ -35,6 +37,7 @@ module.exports = {
     //PAGES PARAMETERS
     LOADING: PAGE + 'LOADING',
     BEAR_LIST: PAGE + 'BEAR_LIST',
+    BEAR_DETAIL: PAGE + 'BEAR_DETAIL',
 
 
 }
