@@ -39,7 +39,7 @@ class BearDetail extends Component {
                                     {detail.description}
                                 </Text>
                                 {detail.food_pairing.map((item, index) => (
-                                    <Text style={styles.contentDetailText}>
+                                    <Text key={index} style={styles.contentDetailText}>
                                         {index + 1 + '-' + item}
                                     </Text>
                                 ))}
